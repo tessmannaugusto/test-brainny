@@ -6,6 +6,7 @@ import {ReactComponent as Ellipse3} from '../assets/img/Ellipse3.svg';
 
 import Loginform from '../components/LoginForm'
 
+import '../assets/css/loginPage.css'
 
 
 export const LoginPage = props => {
