@@ -8,7 +8,7 @@ import Loginform from '../components/LoginForm'
 
 
 
-export default props => {
+export const LoginPage = props => {
     return(
         <div className="main-container">
             <div className="left-section">

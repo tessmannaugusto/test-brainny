@@ -1,14 +1,16 @@
 import React from 'react';
-import LoginPage from './views/loginPage'
+import {BrowserRouter} from 'react-router-dom';
+import {Main} from './components/Main';
+
 
 import './App.css'
-
 
 const App = props => {
     return(
         <div>
-            <LoginPage></LoginPage>
-            
+            <BrowserRouter>
+                <Main></Main>
+            </BrowserRouter>
         </div>
     )
 }
