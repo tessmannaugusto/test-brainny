@@ -4,7 +4,7 @@ import {useForm} from 'react-hook-form';
 import Button from './Button';
 import Input from './Input';
 
-import './LoginForm.css'
+import '../assets/css/LoginForm.css'
 
 
 export default function LoginForm() {

@@ -1,6 +1,8 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 import {LoginPage} from '../views/loginPage';
+import {Dashboard} from '../views/dashboard';
+
 
 export const Main = props => {
     return(
@@ -10,8 +12,7 @@ export const Main = props => {
                     <LoginPage></LoginPage>
                 </Route>
                 <Route path="/dashboard">
-                    {/* <Dashboard></Dashboard> */}
-                    <h1>dashboard</h1>
+                    <Dashboard></Dashboard>
                 </Route>
                 <Route path="/myregisters">
                     {/* <MyRegisters></MyRegisters> */}
