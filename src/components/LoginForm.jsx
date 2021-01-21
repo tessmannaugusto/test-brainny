@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {useForm} from 'react-hook-form';
 
-import Button from './Button';
-import Input from './Input';
+import {Button} from './Button';
+import {Input} from './Input';
 
 import '../assets/css/LoginForm.css'
 
