@@ -19,7 +19,7 @@ export const NewRegister = props => {
             </div>
             <div className="new-register-buttons">
                 <Button name="Salvar" className="save-btn"></Button>
-                <Button name="Cancelar" className="cancel-btn"></Button>
+                <Button name="Cancelar" className="cancel-btn" onClick={props.onClick}></Button>
             </div>
         </div>
     )

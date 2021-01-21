@@ -6,10 +6,16 @@
     position: relative;
 }
 
-.my-registers-container-opacity {
+.background-drawer {
+    display: none;
+}
+
+.background-drawer-active {
+    position: absolute;
     height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    position: relative;
+    left: 0px;
+    top: 0px;
+
+    background: rgba(0, 0, 0, 0.55);
 }

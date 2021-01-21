@@ -22,7 +22,7 @@ export const MyRegisters = (props) => {
 
     
     const newRegisterRef = React.createRef(null)
-    const myRegistersContainerRef = React.createRef(null)
+    const backgroundDrawerRef = React.createRef(null)
 
 
 
@@ -30,19 +30,21 @@ export const MyRegisters = (props) => {
         console.log(newRegisterRef);
         if(newRegisterRef.current.className === "new-register-container-closed") {
             newRegisterRef.current.className = "new-register-container-open"
-            myRegistersContainerRef.current.className = "my-registers-container-opacity"
+            backgroundDrawerRef.current.className = "background-drawer-active"
         }else {
-            newRegisterRef.current.className = "new-register-container-closed"
+            newRegisterRef.current.className = "new-register-container-closed";
+            backgroundDrawerRef.current.className = "background-drawer";
         }
     }
 
     return(
-        <div className="my-registers-container" ref={myRegistersContainerRef}>
+        <div className="my-registers-container">
             <Menu>{props.children}</Menu>
             <Content>
                 <Button name="Registrar" className="new-register-btn" onClick={toggleNewRegister}></Button>
             </Content>
-            <NewRegister reference={newRegisterRef}></NewRegister>
+            <NewRegister reference={newRegisterRef} onClick={toggleNewRegister}>{props.children}</NewRegister>
+            <div className="background-drawer" ref={backgroundDrawerRef}></div>
         </div>  
     )
 }
