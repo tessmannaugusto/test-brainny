@@ -1,0 +1,38 @@
+.login-form-btn {
+    width: 30%;
+    height: 55px;
+    background: #219653;
+    color: #F2F2F2 ;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 900;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.login-form-btn:hover {
+    background: #F2F2F2;
+    color:#219653  ; 
+    border: #219653 solid 2px;
+}
+
+.new-register-btn {
+    position: absolute;
+    top: 4%;
+    left: 68%;
+    width: 180px;
+    height: 55px;
+    background: #219653;
+    color: #F2F2F2 ;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 900;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.new-register-btn:hover {
+    background: #F2F2F2;
+    color:#219653  ; 
+    border: #219653 solid 2px;
+}

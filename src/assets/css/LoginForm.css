@@ -26,21 +26,5 @@
     outline: none;
 }
 
-.button-container .button {
-    width: 30%;
-    height: 55px;
-    background: #219653;
-    color: #F2F2F2 ;
-    border: none;
-    font-size: 1.2rem;
-    font-weight: 900;
-    transition: all .3s ease;
-    cursor: pointer;
-}
 
-.button-container .button:hover {
-    background: #F2F2F2;
-    color:#219653  ; 
-    border: #219653 solid 2px;
-}
 

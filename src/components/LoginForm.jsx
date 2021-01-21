@@ -52,7 +52,7 @@ export default function LoginForm() {
           <Input type="password" id="password" name="password" className="input" inputRef={register({required: true})}></Input>
         </div>
         <div className="button-container">
-          <Button type="submit" name="Login"className="button"></Button>
+          <Button type="submit" name="Login" className="login-form-btn"></Button>
         </div>
       </form>
     

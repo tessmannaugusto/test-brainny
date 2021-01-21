@@ -4,6 +4,7 @@ import { Menu } from '../components/Menu';
 import { Content } from '../components/Content';
 
 import '../assets/css/myRegisters.css'
+import { Button } from '../components/Button';
 
 export const MyRegisters = props => {
 
@@ -18,10 +19,17 @@ export const MyRegisters = props => {
         
     // } @@@@@@@@@@pesquisar depois como funcionar@@@@@@@@@
 
+    const newRegister = () => {
+        console.log("new register");
+        
+    }
+
     return(
         <div className="my-registers-container">
             <Menu>{props.children}</Menu>
-            <Content></Content>
+            <Content>
+                <Button name="Registrar" className="new-register-btn" onClick={newRegister}></Button>
+            </Content>
         </div>  
     )
 }
