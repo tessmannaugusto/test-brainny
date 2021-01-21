@@ -5,6 +5,7 @@ import { Content } from '../components/Content';
 
 import '../assets/css/myRegisters.css'
 import { Button } from '../components/Button';
+import { NewRegister } from '../components/NewRegister';
 
 export const MyRegisters = props => {
 
@@ -30,6 +31,7 @@ export const MyRegisters = props => {
             <Content>
                 <Button name="Registrar" className="new-register-btn" onClick={newRegister}></Button>
             </Content>
+            <NewRegister></NewRegister>
         </div>  
     )
 }
