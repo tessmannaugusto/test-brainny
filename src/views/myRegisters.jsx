@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import { Menu } from '../components/Menu';
 import { Content } from '../components/Content';
@@ -7,7 +7,7 @@ import '../assets/css/myRegisters.css'
 import { Button } from '../components/Button';
 import { NewRegister } from '../components/NewRegister';
 
-export const MyRegisters = props => {
+export const MyRegisters = (props) => {
 
     // const toggleButton= (e) => {
     //     if(e.target.className === "active") {
@@ -20,18 +20,29 @@ export const MyRegisters = props => {
         
     // } @@@@@@@@@@pesquisar depois como funcionar@@@@@@@@@
 
-    const newRegister = () => {
-        console.log("new register");
-        
+    
+    const newRegisterRef = React.createRef(null)
+    const myRegistersContainerRef = React.createRef(null)
+
+
+
+    const toggleNewRegister = () => {
+        console.log(newRegisterRef);
+        if(newRegisterRef.current.className === "new-register-container-closed") {
+            newRegisterRef.current.className = "new-register-container-open"
+            myRegistersContainerRef.current.className = "my-registers-container-opacity"
+        }else {
+            newRegisterRef.current.className = "new-register-container-closed"
+        }
     }
 
     return(
-        <div className="my-registers-container">
+        <div className="my-registers-container" ref={myRegistersContainerRef}>
             <Menu>{props.children}</Menu>
             <Content>
-                <Button name="Registrar" className="new-register-btn" onClick={newRegister}></Button>
+                <Button name="Registrar" className="new-register-btn" onClick={toggleNewRegister}></Button>
             </Content>
-            <NewRegister></NewRegister>
+            <NewRegister reference={newRegisterRef}></NewRegister>
         </div>  
     )
 }
