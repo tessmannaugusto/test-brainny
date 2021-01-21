@@ -2,6 +2,7 @@ import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 import {LoginPage} from '../views/loginPage';
 import {Dashboard} from '../views/dashboard';
+import {MyRegisters} from '../views/myRegisters';
 
 
 export const Main = props => {
@@ -15,8 +16,7 @@ export const Main = props => {
                     <Dashboard></Dashboard>
                 </Route>
                 <Route path="/myregisters">
-                    {/* <MyRegisters></MyRegisters> */}
-                    <h1>registers</h1>
+                    <MyRegisters></MyRegisters>
                 </Route>
                 <Route path="*">
                     {/* <NotFound></NotFound> */}
