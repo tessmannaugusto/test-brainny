@@ -21,8 +21,8 @@ export default function LoginForm() {
   const onSubmit = async data => {
 
     console.log(data);
-    await setUsername(data.username);
-    await setPassword(data.password);
+    setUsername(data.username);
+    setPassword(data.password);
 
 
     try {
