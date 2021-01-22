@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {useForm} from 'react-hook-form';
+import  {Redirect} from 'react-router-dom'
 
 import {Button} from './Button';
 import {Input} from './Input';
@@ -13,22 +14,23 @@ export default function LoginForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsloading] = useState(false);
-  const [success, setSuccess] = useState(false);
   const [error, setError] = useState({status: false, message: "Invalid username or password"});
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
 
-  const  onSubmit = data => {
+  const onSubmit = async data => {
 
     console.log(data);
-    setUsername(data.username);
-    setPassword(data.password);
+    await setUsername(data.username);
+    await setPassword(data.password);
 
 
     try {
     //API CALL AQUI
-      if (username === "augusto" && password === "123456789") {
-        setSuccess(true);
+       if (username === "augusto" && password === "123456789") {
+        setIsLoggedIn(true)
         console.log("Certo!")
+        
       } else {
         setError({status: true});
         console.log("errado")
@@ -54,7 +56,11 @@ export default function LoginForm() {
         <div className="button-container">
           <Button type="submit" name="Login" className="login-form-btn"></Button>
         </div>
+        {isLoggedIn ? <Redirect to="/myRegisters"/> : null}
       </form>
+      
+    
+      
     
   )
 }
