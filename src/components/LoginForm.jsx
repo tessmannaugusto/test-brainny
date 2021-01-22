@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import  {Redirect} from 'react-router-dom'
 
+import {useMutation} from '@apollo/client';
+import {LOGIN_MUTATION} from '../graphql.js';
+
 import {Button} from './Button';
 import {Input} from './Input';
 
@@ -11,35 +14,44 @@ import '../assets/css/LoginForm.css'
 export default function LoginForm() {
   const { register, handleSubmit} = useForm();
 
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [isLoading, setIsloading] = useState(false);
-  const [error, setError] = useState({status: false, message: "Invalid username or password"});
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  const [login] = useMutation(LOGIN_MUTATION);
 
-  const onSubmit = async data => {
+  const onSubmit = async input => {
+    console.log(input)
 
-    console.log(data);
-    setUsername(data.username);
-    setPassword(data.password);
+    try{
+      const {data} = await login({variables:{identifier: input.username, password: input.password}})
+      console.log(data.login.jwt)
 
+      localStorage.setItem("token", data.login.jwt);
+      setIsLoggedIn(true);
 
-    try {
-    //API CALL AQUI
-       if (username === "augusto" && password === "123456789") {
-        setIsLoggedIn(true)
-        console.log("Certo!")
-        
-      } else {
-        setError({status: true});
-        console.log("errado")
-      }
-    } catch (e) {
-      setError({status: true, message: e});
-    } finally {
-      setIsloading(false);
+      
+    } catch(err) {
+      console.log(err)
     }
+    
+
+  
+    // try {
+    // //API CALL AQUI
+
+
+    //    if (data.username === "augusto" && data.password === "123456789") {
+    //     setIsLoggedIn(true)
+    //     console.log("Certo!")
+        
+    //   } else {
+    //     setError({status: true});
+    //     console.log("errado")
+    //   }
+    // } catch (e) {
+    //   setError({status: true, message: e});
+    // } finally {
+    //   setIsloading(false);
+    // }
   };
 
   return(

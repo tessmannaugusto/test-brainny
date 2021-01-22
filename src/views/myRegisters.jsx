@@ -27,7 +27,6 @@ export const MyRegisters = (props) => {
 
 
     const toggleNewRegister = () => {
-        console.log(newRegisterRef);
         if(newRegisterRef.current.className === "new-register-container-closed") {
             newRegisterRef.current.className = "new-register-container-open"
             backgroundDrawerRef.current.className = "background-drawer-active"

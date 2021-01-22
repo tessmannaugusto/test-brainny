@@ -8,6 +8,10 @@ import {ReactComponent as LogoutSvg} from "../assets/img/Logout.svg"
 
 import '../assets/css/Menu.css'
 
+const logout = () => {
+    localStorage.removeItem('token')
+}
+
 
 export const Menu = props => {
 
@@ -29,7 +33,7 @@ export const Menu = props => {
                 </ul>
             </nav>
             <div className="menu-logout-container">
-                <Link to="/"><LogoutSvg className="nav-svg" /></Link>
+                <Link to="/"><LogoutSvg className="nav-svg" onClick={logout}/></Link>
             </div>
         </div>
     )
