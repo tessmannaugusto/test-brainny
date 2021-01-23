@@ -42,7 +42,7 @@ export const MyRegisters = (props) => {
         <div className="my-registers-container">
             {!token ? <Redirect to="/"/>: null }
             <Menu>{props.children}</Menu>
-            <Content>
+            <Content MyRegisters={true}>
                 <Button name="Registrar" className="new-register-btn" onClick={toggleNewRegister}></Button>
             </Content>
             <NewRegister reference={newRegisterRef} onClick={toggleNewRegister}>{props.children}</NewRegister>

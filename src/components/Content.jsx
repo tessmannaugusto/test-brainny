@@ -8,7 +8,7 @@ export const Content = props => {
     return(
         <main className="content-container">
             {props.children}
-            <RegistersTable></RegistersTable>
+            <RegistersTable MyRegisters={props.MyRegisters}></RegistersTable>
 
         </main>
     )

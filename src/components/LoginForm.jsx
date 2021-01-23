@@ -34,25 +34,6 @@ export default function LoginForm() {
       console.log(err)
     }
     
-
-  
-    // try {
-    // //API CALL AQUI
-
-
-    //    if (data.username === "augusto" && data.password === "123456789") {
-    //     setIsLoggedIn(true)
-    //     console.log("Certo!")
-        
-    //   } else {
-    //     setError({status: true});
-    //     console.log("errado")
-    //   }
-    // } catch (e) {
-    //   setError({status: true, message: e});
-    // } finally {
-    //   setIsloading(false);
-    // }
   };
 
   return(
@@ -71,9 +52,5 @@ export default function LoginForm() {
         </div>
         {isLoggedIn ? <Redirect to="/myRegisters"/> : null}
       </form>
-      
-    
-      
-    
   )
 }
