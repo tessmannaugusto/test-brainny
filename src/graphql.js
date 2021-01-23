@@ -39,12 +39,14 @@ export const DASHBOARD_REGISTERS_QUERY = gql`
   }
  `
 
-// export const MY_REGISTERS_QUERY = gql`
-// query registeredTime{
-//   timeRegistered
-//   user{
-//     name
-//     id
-//   }
-// }
-// `
+export const MY_REGISTERS_QUERY = gql`
+query MyRegisters($id: Int!){
+  registeredTimes(limit:5 where: {user: {id: $id}}){
+    timeRegistered
+    user{
+      name
+      id
+    }
+  }
+}
+`

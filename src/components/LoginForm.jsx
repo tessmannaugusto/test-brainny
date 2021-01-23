@@ -19,16 +19,14 @@ export default function LoginForm() {
   const [login] = useMutation(LOGIN_MUTATION);
 
   const onSubmit = async input => {
-    console.log(input)
 
     try{
       const {data} = await login({variables:{identifier: input.username, password: input.password}})
-      console.log(data.login.jwt)
 
       localStorage.setItem("token", data.login.jwt);
       localStorage.setItem("role", data.login.user.role.type);
       localStorage.setItem("userId", data.login.user.id);
-      localStorage.setItem("userName", data.login.user.name);
+  
       setIsLoggedIn(true);
 
       
