@@ -10,6 +10,11 @@ import '../assets/css/loginPage.css'
 
 
 export const LoginPage = props => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('role');
+    localStorage.removeItem('userId');
+    localStorage.removeItem('userName');
+
     return(
         <div className="main-container">
             <div className="left-section">

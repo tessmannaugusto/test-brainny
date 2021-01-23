@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from './Button';
 import {useMutation} from '@apollo/client';
+import InputMask from "react-input-mask";
 
 import {REGISTER_TIME_MUTATION} from '../graphql';
 
@@ -13,8 +14,10 @@ export const NewRegister = props => {
 
     const [newRegister] = useMutation(REGISTER_TIME_MUTATION);
 
+    const userId = localStorage.getItem('userId')
+
     const onSubmit = async input => {
-        const {data} = await newRegister({variables:{user: 2, timeRegistered: new Date().toISOString()}})
+        const {data} = await newRegister({variables:{user: userId, timeRegistered: new Date().toISOString()}})
     }
 
     return(
@@ -26,7 +29,7 @@ export const NewRegister = props => {
                 <span>Colaborador</span>
                 <span className="new-register-info-name">João Silva</span>
                 <span>Data/Hora</span>
-                <input className="new-register-info-date" type="number"/>
+                <InputMask className="new-register-info-date" mask=" 9 9 / 9 9 / 9 9    9 9 : 9 9 " maskPlaceholder="_"></InputMask>
             </div>
             <div className="new-register-buttons">
                 <Button name="Salvar" className="save-btn" onClick={onSubmit}></Button>
