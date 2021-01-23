@@ -17,7 +17,7 @@ export const NewRegister = props => {
     const userId = localStorage.getItem('userId')
 
     const onSubmit = async input => {
-        const {data} = await newRegister({variables:{user: userId, timeRegistered: new Date().toISOString()}})
+        await newRegister({variables:{user: userId, timeRegistered: new Date().toISOString()}})
     }
 
     return(
