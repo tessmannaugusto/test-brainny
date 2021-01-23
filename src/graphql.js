@@ -28,7 +28,7 @@ export const REGISTER_TIME_MUTATION = gql`
 `
 export const DASHBOARD_REGISTERS_QUERY = gql`
   query RegisteredTimes{
-    registeredTimes{
+    registeredTimes(limit: 5){
       timeRegistered
       user{
         name
