@@ -26,6 +26,7 @@ export default function LoginForm() {
       console.log(data.login.jwt)
 
       localStorage.setItem("token", data.login.jwt);
+      localStorage.setItem("role", data.login.user.role.type);
       setIsLoggedIn(true);
 
       

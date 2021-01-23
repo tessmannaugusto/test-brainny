@@ -10,6 +10,7 @@ import '../assets/css/Menu.css'
 
 const logout = () => {
     localStorage.removeItem('token')
+    localStorage.removeItem('role')
 }
 
 

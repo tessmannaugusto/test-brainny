@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+import React from 'react';
+import {Redirect} from 'react-router-dom'
 
 import { Menu } from '../components/Menu';
 import { Content } from '../components/Content';
@@ -25,7 +26,6 @@ export const MyRegisters = (props) => {
     const backgroundDrawerRef = React.createRef(null)
 
 
-
     const toggleNewRegister = () => {
         if(newRegisterRef.current.className === "new-register-container-closed") {
             newRegisterRef.current.className = "new-register-container-open"
@@ -36,8 +36,11 @@ export const MyRegisters = (props) => {
         }
     }
 
+    const token = localStorage.getItem('token') || null;
+
     return(
         <div className="my-registers-container">
+            {!token ? <Redirect to="/"/>: null }
             <Menu>{props.children}</Menu>
             <Content>
                 <Button name="Registrar" className="new-register-btn" onClick={toggleNewRegister}></Button>
