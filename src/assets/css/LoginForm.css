@@ -26,5 +26,15 @@
     outline: none;
 }
 
+.error-span-hidden {
+    display: none;
+}
+
+.error-span-show {
+    display: block;
+    font-size: 1rem;
+    color: red;
+}
+
 
 

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {useForm} from 'react-hook-form';
 import  {Redirect} from 'react-router-dom'
 
@@ -12,11 +12,19 @@ import '../assets/css/LoginForm.css'
 
 
 export default function LoginForm() {
-  const { register, handleSubmit} = useForm();
+  const { register, handleSubmit } = useForm();
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  const errorSpan = useRef(null);
+
   const [login] = useMutation(LOGIN_MUTATION);
+
+  const showError = () => {
+    if(errorSpan.current.className === "error-span-hidden"){
+      errorSpan.current.className = "error-span-show"
+    }
+  }
 
   const onSubmit = async input => {
 
@@ -28,10 +36,10 @@ export default function LoginForm() {
       localStorage.setItem("userId", data.login.user.id);
   
       setIsLoggedIn(true);
-
       
     } catch(err) {
       console.log(err)
+      showError()
     }
     
   };
@@ -49,6 +57,7 @@ export default function LoginForm() {
         </div>
         <div className="button-container">
           <Button type="submit" name="Login" className="login-form-btn"></Button>
+          <span ref={errorSpan} className="error-span-hidden">Login ou senha incorretos, tente novamente.</span>
         </div>
         {isLoggedIn ? <Redirect to="/myRegisters"/> : null}
       </form>

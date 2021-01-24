@@ -79,7 +79,7 @@
 
 .background-img {
     position: absolute;
-    left: 870px;
+    right: -1%;
     z-index: 1;
 }
 
