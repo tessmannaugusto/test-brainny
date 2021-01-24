@@ -65,7 +65,7 @@
 .ellipse-menu-one {
     position: absolute;
     top: 13%;
-    left: 32.5%;
+    left: 34.5%;
     height: 40px;
     width: 40px ;
 }
@@ -73,7 +73,7 @@
 .ellipse-menu-two {
     position: absolute;
     top: 11%;
-    left: 28%;
+    left: 30%;
     height: 53px;
     width: 53px ;
 }
@@ -81,7 +81,7 @@
 .ellipse-menu-three {
     position: absolute;
     top: 12%;
-    left: 32%;
+    left: 34%;
     height: 50px;
     width: 50px ;
 }

@@ -40,7 +40,7 @@ export const DASHBOARD_REGISTERS_QUERY = gql`
  `
 
 export const MY_REGISTERS_QUERY = gql`
-query MyRegisters($id: Int!){
+query MyRegisters($id: ID!){
   registeredTimes(limit:5 where: {user: {id: $id}}){
     timeRegistered
     user{
