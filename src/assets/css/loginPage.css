@@ -14,7 +14,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 20vh;
+    height: 20%;
     z-index: 2;
 }
 
@@ -81,4 +81,15 @@
     position: absolute;
     right: -1%;
     z-index: 1;
+}
+
+@media  (min-width : 1824px) {
+    .background-img {
+        height: 914px;
+        width: 867px;
+    }
+    .form-container {
+        width: 550px;
+        height: 450px;
+    }
 }

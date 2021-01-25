@@ -30,9 +30,11 @@ export const MyRegisters = (props) => {
         if(newRegisterRef.current.className === "new-register-container-closed") {
             newRegisterRef.current.className = "new-register-container-open"
             backgroundDrawerRef.current.className = "background-drawer-active"
+            console.log("opened")
         }else {
             newRegisterRef.current.className = "new-register-container-closed";
             backgroundDrawerRef.current.className = "background-drawer";
+            console.log("closed")
         }
     }
 

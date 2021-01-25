@@ -29,14 +29,21 @@ export const NewRegister = props => {
 
     const onSubmit = async input => {
         
-        // await newRegister({variables:{user: userId, timeRegistered: formatISO(new Date(2019, 8, 18, 19, 0, 52)) || new Date().toISOString()}})
+        // try {
+             // await newRegister({variables:{user: userId, timeRegistered: formatISO(new Date(2019, 8, 18, 19, 0, 52)) || new Date().toISOString()}})
+            
+        //     setIsSaved(true);
 
-        // setInputState(dateInputRef.value);
-        // console.log(dateInput)
+        // } catch (error) {
+            
+        // }
+        
+
+        props.onClick()
         logInput();
 
     }
-
+    // PUXAR NOME COMPLETO@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     return(
         <div className="new-register-container-closed" ref={props.reference}>
             <div className="new-register-title">

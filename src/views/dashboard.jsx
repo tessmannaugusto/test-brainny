@@ -18,9 +18,9 @@ export const Dashboard = props => {
     return(
         
         <div className="dashboard-container">
-            {!token ? <Redirect to="/"/>: null }
+            {!token ? <Redirect to="/"/> : null }
             <Menu>{props.children}</Menu>
-            {role === "admin" ? <Content MyRegisters={false}></Content>: <h1>Access Denied</h1> }
+            {role === "admin" ? <Content MyRegisters={false}></Content>: <h1> Access Denied </h1> }
             
         </div>  
     )
