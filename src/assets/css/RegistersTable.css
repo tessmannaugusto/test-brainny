@@ -11,7 +11,7 @@
 .registers-table {
     height: 100%;
     width: 100%;
-    font-family: "Nunito", sans-serif;
+    font-family: Nunito , sans-serif;
     position: relative;
     
 }
@@ -23,6 +23,7 @@
     justify-content: space-around;
     width: 100%;
     height: 73px;
+    font-size: 25px;
     
 }
 
@@ -37,14 +38,50 @@
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     margin-bottom: 25px;
+    border-left: 10px solid #6FCF97;
+    font-size: 25px;
+}
+
+.registers-table-tr td {
+    max-width: 120px;
+}
+
+.registers-table-tr td small {
+    font-size: 11px;
+}
+
+.registers-table-tr-date {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    
+    color: #888888;
 }
 
 .registers-table-tr-hour {
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: normal;
     font-size: 35px;
     line-height: 53px;
     letter-spacing: 0.02em;
     color: #888888;
+}
+
+@media (min-device-width : 320px) and (max-device-width : 480px) {
+    .registers-table-tr-header {
+        font-size:20px 
+    }
+    .registers-table-tr-name {
+        font-size:15px 
+    }
+    .registers-table-tr-hour {
+        font-size:15px 
+    }
+    .registers-table-tr-date {
+        font-size:15px 
+    }
+}
+
+
+@media only screen  and (min-width : 1824px) {
+        /* Styles */
+
 }

@@ -1,9 +1,8 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
+import {formatDate, formatHour, formatId} from '../assets/helper/formattingDates'
 
 import {DASHBOARD_REGISTERS_QUERY} from '../graphql';
-
-
 
 
 export const RenderDashboardTable = props => {
@@ -16,9 +15,9 @@ export const RenderDashboardTable = props => {
 
     return data.registeredTimes.map((registeredTime, i) => (
         <tr key={i} className="registers-table-tr">
-        <td>{registeredTime.user.name}<br></br><small>{registeredTime.user.id}</small></td>
-        <td>{registeredTime.timeRegistered || "12/10/19"}</td> 
-        <td className="registers-table-tr-hour">{registeredTime.timeRegistered || "09:50h"}</td>
+        <td className="registers-table-tr-name">{registeredTime.user.name}<br></br><small>{formatId(registeredTime.user.id)}</small></td>
+        <td className="registers-table-tr-hour">{formatDate(registeredTime.timeRegistered) || "No date available"}</td> 
+        <td className="registers-table-tr-hour">{formatHour(registeredTime.timeRegistered) || "09:50h"}</td>
         </tr>
     )) 
       
