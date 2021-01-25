@@ -17,14 +17,12 @@ export const NewRegister = props => {
     const [dateInput, setDateInput] = useState(new Date());
 
 
-    const onSubmit = async input => {
+    const onSubmit = async () => {
         const utcDate = new Date(dateInput).toISOString();
-        console.log(utcDate);
         
         try {
             await newRegister({variables:{user: userId, timeRegistered: utcDate }})
             props.onClick()
-            console.log("Register added = " + utcDate);
         } catch (error) {
             console.log(error)
         }

@@ -32,6 +32,10 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+.hidden {
+    display: none;
+}
+
 .menu-nav-ul li:hover:nth-child(2) {
     color: #219653;
     border-left: 10px solid #219653;
@@ -50,7 +54,7 @@
     font-family: "Nunito", sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 20px;
     display: flex;
     flex-direction: column;
@@ -91,11 +95,14 @@
     margin-bottom: 40px;
 }
 
+.nav-svg {
+    margin-bottom: 5px;
+}
+
 .nav-svg:hover {
     fill: #219653;
 }
 
 .active {
-    color: #219653;
     border-left: 10px solid #219653;
 }
