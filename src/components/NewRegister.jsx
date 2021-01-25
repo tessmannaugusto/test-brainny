@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Button } from './Button';
-// import {useMutation} from '@apollo/client';
+import {useMutation} from '@apollo/client';
 import DatePicker from 'react-datepicker'
 
 
-// import {REGISTER_TIME_MUTATION} from '../graphql';
+import {REGISTER_TIME_MUTATION} from '../graphql';
 
 import '../assets/css/NewRegister.css'
 import "react-datepicker/dist/react-datepicker.css";
@@ -12,35 +12,22 @@ import "react-datepicker/dist/react-datepicker.css";
 
 export const NewRegister = props => {
 
-    // const userId = localStorage.getItem('userId');
-    // const [newRegister] = useMutation(REGISTER_TIME_MUTATION);
+    const userId = localStorage.getItem('userId');
+    const [newRegister] = useMutation(REGISTER_TIME_MUTATION);
     const [dateInput, setDateInput] = useState(new Date());
 
 
-    const logInput = () => {
-        const utcDate = new Date(dateInput).toISOString();
-
-        console.log(utcDate);
-    }
-
     const onSubmit = async input => {
         const utcDate = new Date(dateInput).toISOString();
+        console.log(utcDate);
         
-        // try {
-
-
-            // await newRegister({variables:{user: userId, timeRegistered: }})
-            
-        //     setIsSaved(true);
-
-        // } catch (error) {
-            
-        // }
-        
-
-        props.onClick()
-        logInput();
-
+        try {
+            await newRegister({variables:{user: userId, timeRegistered: utcDate }})
+            props.onClick()
+            console.log("Register added = " + utcDate);
+        } catch (error) {
+            console.log(error)
+        }
     }
     // PUXAR NOME COMPLETO@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     return(
@@ -54,11 +41,13 @@ export const NewRegister = props => {
                 {/* PODERIA USAR ME PRA PEGAR ESSE NOME */}
                 <span>Data/Hora</span>
                 <DatePicker
+                    className="date-picker"
                     selected={dateInput}
                     onChange={date => setDateInput(date)}
                     showTimeSelect
                     dateFormat="dd/MM/yyyy HH:mm"
                     value={dateInput}
+                    placeholderText=" __/__/__  __:__ "
                 />
             </div>
             <div className="new-register-buttons">

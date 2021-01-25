@@ -64,9 +64,9 @@
     margin-left: 7%;
 }
 
-.new-register-info-date {
+.date-picker {
     margin-left: 7%;
-    width: 60%;
+    width: 100%;
     background: #F2F2F2;
     text-align: center;
     letter-spacing: 2px;
