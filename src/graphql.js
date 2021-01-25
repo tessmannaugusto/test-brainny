@@ -50,3 +50,16 @@ query MyRegisters($id: ID!){
   }
 }
 `
+
+export const ME_QUERY = gql`
+  query {
+    me {
+      id
+      role{
+        name
+        id
+      }
+      username
+    }
+  }
+`

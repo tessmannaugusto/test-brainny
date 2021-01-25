@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
-import {formatDate, formatHour, formatId} from '../assets/helper/formattingDates'
+import {formatDate, formatHour, formatId} from '../utils/formattingDates'
 
 import {DASHBOARD_REGISTERS_QUERY} from '../graphql';
 

@@ -1,10 +1,8 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
-import {formatDate, formatHour, formatId} from '../assets/helper/formattingDates'
+import {formatDate, formatHour, formatId} from '../utils/formattingDates'
 
 import {MY_REGISTERS_QUERY} from '../graphql';
-
-
 
 
 export const RenderMyRegistersTable = props => {
