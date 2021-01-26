@@ -26,7 +26,10 @@
     width: 100%;
     height: 73px;
     font-size: 25px;
-    
+}
+
+.registers-table-tr-header th {
+   margin-left: -15%;
 }
 
 .registers-table-tr {
@@ -45,7 +48,7 @@
 }
 
 .registers-table-tr td {
-    max-width: 120px;
+    max-width: 150px;
 }
 
 .registers-table-tr td small {

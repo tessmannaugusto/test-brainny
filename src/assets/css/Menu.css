@@ -105,4 +105,31 @@
 
 .active {
     border-left: 10px solid #219653;
+    color: #219653;
+}
+
+
+@media (min-width : 1824px) {
+    .ellipse-menu-one {
+        height: 55px;
+        width: 55px ;
+    }
+    
+    .ellipse-menu-two {
+        height: 68px;
+        width: 68px ;
+    }
+    
+    .ellipse-menu-three {
+        height: 65px;
+        width: 65px ;
+    }
+    .nav-svg {
+        height: 35px;
+        width: 35px;
+        margin-bottom: 10px;
+    }
+    .menu-nav-ul a {
+        font-size: 20px;
+    }
 }

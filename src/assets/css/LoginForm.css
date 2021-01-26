@@ -20,6 +20,7 @@
     border: none;
     line-height: 50px;
     font-size: 25px;
+    padding-left: 15px;
 }
 
 .input-container input:focus {
@@ -41,6 +42,17 @@
     font-size: 1rem;
     color: red;
     margin-left: 5%;
+}
+
+@media  (min-width : 1824px) {
+    .input-container label {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .error-span-show {
+        font-size: 1.2rem;
+    }
 }
 
 

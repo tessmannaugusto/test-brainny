@@ -2,25 +2,15 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import {formatDate, formatHour, formatId} from '../utils/formattingDates'
 
-import {MY_REGISTERS_QUERY, ME_QUERY} from '../graphql';
+import {MY_REGISTERS_QUERY} from '../graphql';
+import {GetMyInfo} from '../utils/getMyInfo';
 
 
 export const RenderMyRegistersTable = props => {
 
     const userId = localStorage.getItem('userId');
-
-    // const GetMyInfo = () => {
-        
-    //     const {loading, error, data} = useQuery(ME_QUERY)
-
-    //     if(loading) return null
-    //     if(error) console.log(error)
-
-    //     localStorage.setItem('userId', data.me.id);
-    //     localStorage.setItem('userRole', data.me.role.name);
-    // }
     
-    // GetMyInfo();
+    GetMyInfo();
 
     const {loading, error, data} = useQuery(MY_REGISTERS_QUERY, {variables: {id: userId }})
 
