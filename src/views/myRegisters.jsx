@@ -33,7 +33,7 @@ export const MyRegisters = (props) => {
             <Content MyRegisters={true}>
                 <Button name="Registrar" className="new-register-btn" onClick={toggleNewRegister}></Button>
             </Content>
-            <NewRegister reference={newRegisterRef} onClick={toggleNewRegister}>{props.children}</NewRegister>
+            <NewRegister reference={newRegisterRef} onClick={toggleNewRegister} >{props.children}</NewRegister>
             <div className="background-drawer" ref={backgroundDrawerRef}></div>
         </div>  
     )

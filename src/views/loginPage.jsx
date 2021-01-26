@@ -11,7 +11,7 @@ import '../assets/css/loginPage.css'
 
 export const LoginPage = props => {
     localStorage.removeItem('token');
-    localStorage.removeItem('role');
+    localStorage.removeItem('userRole');
     localStorage.removeItem('userId');
     localStorage.removeItem('userName');
 

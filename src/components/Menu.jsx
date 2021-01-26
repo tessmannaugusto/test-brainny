@@ -1,7 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import { useQuery } from '@apollo/client';
-import {ME_QUERY} from '../graphql';
 
 import {ReactComponent as Ellipse1} from '../assets/img/Ellipse1.svg';
 import {ReactComponent as Ellipse2} from '../assets/img/Ellipse2.svg';
@@ -12,9 +10,6 @@ import {ReactComponent as LogoutSvg} from "../assets/img/Logout.svg"
 
 import '../assets/css/Menu.css'
 
-
-
-
 const logout = () => {
     localStorage.removeItem('userId');
     localStorage.removeItem('token');
@@ -24,23 +19,11 @@ const logout = () => {
 
 
 export const Menu =  props => {
-
-    // const GetMyInfo = () => {
-        
-    //     const {loading, error, data} = useQuery(ME_QUERY)
-
-    //     if(loading) return null
-    //     if(error) console.log(error)
-
-    //     localStorage.setItem('userId', data.me.id);
-    //     localStorage.setItem('userRole', data.me.role.name);
-    // }
-    
+  
     // GetMyInfo();
 
     const role = localStorage.getItem('userRole');
     
-
     return(
         <div className="menu">
             <nav className="menu-nav">

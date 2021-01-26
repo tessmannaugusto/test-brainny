@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch , Route } from 'react-router-dom';
+
 import { LoginPage } from '../views/loginPage';
 import { Dashboard } from '../views/dashboard';
 import { MyRegisters } from '../views/myRegisters';
@@ -7,10 +8,11 @@ import { PageNotFound } from './PageNotFound';
 
 
 export const Main = props => {
+
     return(
         <main>
             <Switch>
-                <Route exact path="/">
+                <Route exact path="/" >
                     <LoginPage></LoginPage>
                 </Route>
                 <Route path="/dashboard">
