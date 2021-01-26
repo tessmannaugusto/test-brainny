@@ -1,6 +1,7 @@
 import React from 'react';
-import {BrowserRouter} from 'react-router-dom';
-import {Main} from './components/Main';
+import { BrowserRouter } from 'react-router-dom';
+
+import { Routes } from './components/Routes';
 
 
 import './App.css'
@@ -9,7 +10,7 @@ const App = props => {
     return(
         <div>
             <BrowserRouter>
-                <Main></Main>
+                <Routes></Routes>
             </BrowserRouter>
         </div>
     )

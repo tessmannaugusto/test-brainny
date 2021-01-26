@@ -13,5 +13,7 @@ export const GetMyInfo = () => {
 
     localStorage.setItem('userId', data.me.id);
     localStorage.setItem('userRole', data.me.role.name);
-    localStorage.setItem('userName', data.me.username)
+    let username = data.me.username;
+    username = username[0].toUpperCase() + username.substring(1)
+    localStorage.setItem('userName', username )
 }

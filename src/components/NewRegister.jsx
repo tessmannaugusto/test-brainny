@@ -20,6 +20,7 @@ export const NewRegister = props => {
         try {
             await newRegister({variables:{user: userId, timeRegistered: utcDate }})
             props.onClick()
+            window.location.reload(false);
         } catch (error) {
             console.log(error)
         }

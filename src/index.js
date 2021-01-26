@@ -1,6 +1,5 @@
 import ReactDom from 'react-dom';
 import React from 'react';
-
 import { ApolloClient, ApolloProvider, createHttpLink, InMemoryCache } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
@@ -29,8 +28,6 @@ const client = new ApolloClient({
     link: authLink.concat(httpLink),
     cache: new InMemoryCache()
 });
-
-
 
 ReactDom.render(
     <ApolloProvider client={client}>

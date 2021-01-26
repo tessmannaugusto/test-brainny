@@ -7,7 +7,7 @@ import { MyRegisters } from '../views/myRegisters';
 import { PageNotFound } from './PageNotFound';
 
 
-export const Main = props => {
+export const Routes = props => {
 
     return(
         <main>

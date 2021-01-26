@@ -1,4 +1,4 @@
-# Registos de ponto - Test Frontend
+# Registros de ponto - Test Frontend
 
 O projeto Registros de ponto foi desenvolvido durante uma semana com a intenção de demonstrar skills básicas necessárias para trabalhar com web development, mais especificamente a parte de Frontend. A aplicação consiste em um sistema básico para gerenciamento de registros de ponto de colaboradores de uma empresa.
 
