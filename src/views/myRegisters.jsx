@@ -10,18 +10,6 @@ import { NewRegister } from '../components/NewRegister';
 
 export const MyRegisters = (props) => {
 
-    // const toggleButton= (e) => {
-    //     if(e.target.className === "active") {
-    //         e.target.className = ""
-    //         console.log("ae carai")
-    //     }else {
-    //         e.target.className = "active"
-    //         console.log("ae carai")
-    //     }
-        
-    // } @@@@@@@@@@pesquisar depois como funcionar@@@@@@@@@
-
-    
     const newRegisterRef = React.createRef(null)
     const backgroundDrawerRef = React.createRef(null)
 

@@ -16,26 +16,29 @@ import '../assets/css/Menu.css'
 
 
 const logout = () => {
-    localStorage.removeItem('token')
-    localStorage.removeItem('role')
+    localStorage.removeItem('userId');
+    localStorage.removeItem('token');
+    localStorage.removeItem('userRole');
+    localStorage.removeItem('name');
 }
 
 
 export const Menu =  props => {
 
-    
-    // const { data, loading, error } =  useQuery(ME_QUERY);
+    // const GetMyInfo = () => {
+        
+    //     const {loading, error, data} = useQuery(ME_QUERY)
 
-    
+    //     if(loading) return null
+    //     if(error) console.log(error)
 
-    // if(loading) return console.log(loading);
-    // if(error) return console.log(error.message);
+    //     localStorage.setItem('userId', data.me.id);
+    //     localStorage.setItem('userRole', data.me.role.name);
+    // }
     
-    // return data.me.map((me, i) => (
-    //     <h1 key={i} >{me.id}</h1>
-    // ))
+    // GetMyInfo();
 
-    const role = localStorage.getItem('role');
+    const role = localStorage.getItem('userRole');
     
 
     return(

@@ -32,7 +32,7 @@ export default function LoginForm() {
       const {data} = await login({variables:{identifier: input.username, password: input.password}})
 
       localStorage.setItem("token", data.login.jwt);
-      localStorage.setItem("role", data.login.user.role.type);
+      localStorage.setItem("userRole", data.login.user.role.type);
       localStorage.setItem("userId", data.login.user.id);
   
       setIsLoggedIn(true);
