@@ -1,12 +1,12 @@
 import React, {useRef, useState} from 'react';
-import {useForm} from 'react-hook-form';
-import  {Redirect} from 'react-router-dom'
+import { useForm } from 'react-hook-form';
+import { Redirect } from 'react-router-dom'
 
-import {useMutation} from '@apollo/client';
-import {LOGIN_MUTATION} from '../graphql.js';
+import { useMutation } from '@apollo/client';
+import { LOGIN_MUTATION } from '../graphql.js';
 
-import {Button} from './Button';
-import {Input} from './Input';
+import { Button } from './Button';
+import { Input } from './Input';
 
 import '../assets/css/LoginForm.css'
 

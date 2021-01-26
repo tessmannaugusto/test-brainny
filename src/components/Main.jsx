@@ -1,8 +1,9 @@
 import React from 'react';
-import {Switch, Route} from 'react-router-dom';
-import {LoginPage} from '../views/loginPage';
-import {Dashboard} from '../views/dashboard';
-import {MyRegisters} from '../views/myRegisters';
+import { Switch , Route } from 'react-router-dom';
+import { LoginPage } from '../views/loginPage';
+import { Dashboard } from '../views/dashboard';
+import { MyRegisters } from '../views/myRegisters';
+import { PageNotFound } from './PageNotFound';
 
 
 export const Main = props => {
@@ -19,8 +20,7 @@ export const Main = props => {
                     <MyRegisters></MyRegisters>
                 </Route>
                 <Route path="*">
-                    {/* <NotFound></NotFound> */}
-                    <h1>not found</h1>
+                    <PageNotFound></PageNotFound>
                 </Route>
             </Switch>
         </main>

@@ -1,23 +1,15 @@
 import React from 'react';
-import {Redirect} from 'react-router-dom'
-
+import { Redirect } from 'react-router-dom'
 
 import { Menu } from '../components/Menu';
-import {Content} from '../components/Content';
-import {GetMyInfo} from '../utils/getMyInfo';
-
-
+import { Content } from '../components/Content';
+import { GetMyInfo } from '../utils/getMyInfo';
 
 import '../assets/css/dashboard.css'
 
-
-
 export const Dashboard = props => {
 
-
-    
     GetMyInfo();
-
 
     const token = localStorage.getItem('token') || null;
     const role = localStorage.getItem('userRole');

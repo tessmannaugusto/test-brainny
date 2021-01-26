@@ -1,8 +1,8 @@
 import React from 'react';
-import {ReactComponent as BackgroundImg}from '../assets/img/Vector.svg';
-import {ReactComponent as Ellipse1} from '../assets/img/Ellipse1.svg';
-import {ReactComponent as Ellipse2} from '../assets/img/Ellipse2.svg';
-import {ReactComponent as Ellipse3} from '../assets/img/Ellipse3.svg';
+import { ReactComponent as BackgroundImg }from '../assets/img/Vector.svg';
+import { ReactComponent as Ellipse1 } from '../assets/img/Ellipse1.svg';
+import { ReactComponent as Ellipse2 } from '../assets/img/Ellipse2.svg';
+import { ReactComponent as Ellipse3 } from '../assets/img/Ellipse3.svg';
 
 import Loginform from '../components/LoginForm'
 

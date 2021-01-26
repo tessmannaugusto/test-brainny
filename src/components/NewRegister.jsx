@@ -5,7 +5,7 @@ import DatePicker from 'react-datepicker'
 
 
 import { REGISTER_TIME_MUTATION } from '../graphql';
-import {GetMyInfo} from '../utils/getMyInfo';
+import { GetMyInfo } from '../utils/getMyInfo';
 
 
 
@@ -31,7 +31,6 @@ export const NewRegister = props => {
         try {
             await newRegister({variables:{user: userId, timeRegistered: utcDate }})
             props.onClick()
-            console.log("adicionado em" + utcDate)
         } catch (error) {
             console.log(error)
         }

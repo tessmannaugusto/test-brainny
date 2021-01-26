@@ -17,6 +17,11 @@ export const RenderMyRegistersTable = props => {
     if (loading) return <tr><td>Loading..</td><td>Loading..</td><td>Loading..</td></tr>;
     if (error) return <tr><td>Error! {error.message}</td><td></td><td></td></tr>;
 
+    // const sortedData = data.registeredTimes.sort((a, b) => b - a);
+
+
+    console.log(data)
+
     return data.registeredTimes.map((registeredTime, i) => (
         <tr key={i} className="registers-table-tr">
         <td className="registers-table-tr-name" {...localStorage.setItem('name', registeredTime.user.name)}>{registeredTime.user.name}<br></br><small>{formatId(registeredTime.user.id)}</small></td>

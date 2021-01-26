@@ -1,5 +1,5 @@
 import React from 'react';
-import {Redirect} from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 
 import { Menu } from '../components/Menu';
 import { Content } from '../components/Content';
@@ -7,7 +7,6 @@ import { Content } from '../components/Content';
 import '../assets/css/myRegisters.css'
 import { Button } from '../components/Button';
 import { NewRegister } from '../components/NewRegister';
-import { GetMyInfo } from '../utils/getMyInfo';
 
 export const MyRegisters = (props) => {
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {RegistersTable} from '../components/RegistersTable'
+import { RegistersTable } from '../components/RegistersTable'
 
 import '../assets/css/Content.css'
 
