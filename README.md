@@ -29,7 +29,7 @@ Para inicialização da aplicação, seguir script abaixo.
 npm start
 ```
 
-Após execuração do comando acima, o programa pode ser usado normalmente se utilizando das credencias de login e senha fornecidos anteriormente por e-mail.
+Após execução do comando acima, o programa pode ser usado normalmente se utilizando das credenciais de login e senha fornecidos anteriormente por e-mail.
 
 
 ## Tecnologias
