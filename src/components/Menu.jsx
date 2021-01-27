@@ -19,8 +19,6 @@ const logout = () => {
 
 
 export const Menu =  props => {
-  
-    // GetMyInfo();
 
     const role = localStorage.getItem('userRole');
     

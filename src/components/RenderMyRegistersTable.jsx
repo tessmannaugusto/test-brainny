@@ -16,7 +16,7 @@ export const RenderMyRegistersTable = props => {
 
     if (loading) return <tr><td>Loading..</td><td>Loading..</td><td>Loading..</td></tr>;
     if (error) return <tr><td>Error! {error.message}</td><td></td><td></td></tr>;
-
+    
 
     const dataSortedByTimeRegistered = data.registeredTimes
         .slice()
@@ -27,8 +27,6 @@ export const RenderMyRegistersTable = props => {
 
             return Date.parse(b.timeRegistered) - Date.parse(a.timeRegistered)
         })
-
-    
 
     return dataSortedByTimeRegistered.map((registeredTime, i) => (
         <tr key={i} className="registers-table-tr">
