@@ -133,3 +133,29 @@
         font-size: 20px;
     }
 }
+
+@media (max-width: 1400px) {
+    .ellipse-menu-one {
+        height: 32px;
+        width: 32px ;
+    }
+    
+    .ellipse-menu-two {
+        height: 45px;
+        width: 45px ;
+    }
+    
+    .ellipse-menu-three {
+        height: 42px;
+        width: 42px ;
+    }
+    .nav-svg {
+        height: 20px;
+        width: 20px;
+    }
+    .menu-nav-ul a {
+        margin-top: 5px;
+        text-align: center;
+        font-size: 10px;
+    }
+}

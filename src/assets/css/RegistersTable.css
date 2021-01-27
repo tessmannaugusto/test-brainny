@@ -85,3 +85,19 @@
     }
 }
 
+
+@media (max-width: 1400px) {
+    .registers-table-tr-header {
+        font-size:25px 
+    }
+    .registers-table-tr-name {
+        font-size:25px 
+    }
+    .registers-table-tr-hour {
+        font-size:25px 
+    }
+    .registers-table-tr-date {
+        font-size:25px 
+    }
+}
+

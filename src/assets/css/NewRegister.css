@@ -82,3 +82,25 @@
     border-top: 0.3px solid #363636;
     transform: matrix(1, 0, 0, 1, 0, 0);
 }
+
+@media (min-width : 1824px) {
+    .new-register-title span {
+        font-size: 25px;
+
+    }
+    .new-register-info span:nth-child(1){
+        font-size: 20px;
+    }
+    
+    .new-register-info span:nth-child(3){
+        font-size: 20px;
+    }
+    
+    .new-register-info-name {
+        font-size: 32px;
+    }
+
+    .date-picker {
+        font-size: 20px;
+    }
+}
